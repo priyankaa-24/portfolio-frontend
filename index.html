@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Priyanka | Student Help Desk</title>
+    <title>PRIYANKA | Student Help Desk</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         /* General Reset */
@@ -22,8 +22,9 @@
 
         /* Hero Image Section */
         .hero {
-            background: linear-gradient(rgba(15, 32, 39, 0.8), rgba(32, 58, 67, 0.8)), 
-                        url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
+            /* Updated to a highly aesthetic, warm, and realistic study/workspace image */
+            background: linear-gradient(rgba(15, 25, 35, 0.6), rgba(15, 25, 35, 0.8)), 
+                        url('https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat fixed;
             height: 60vh;
             display: flex;
             flex-direction: column;
@@ -35,22 +36,30 @@
         }
 
         .hero h1 {
-            font-size: 3.5rem;
+            font-size: 4rem;
             font-weight: 700;
-            color: #38bdf8;
+            color: #ffffff; /* Crisp white for the name */
+            letter-spacing: 2px;
             margin-bottom: 10px;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .hero h1 span {
+            color: #38bdf8; /* Accent color on a dot or part of the text if desired, keeping it clean here */
         }
 
         .hero h2 {
             font-size: 1.5rem;
             font-weight: 300;
             margin-bottom: 15px;
+            color: #e0f2fe;
         }
 
         .hero p {
             font-size: 1.1rem;
             max-width: 600px;
             color: #cbd5e1;
+            font-style: italic;
         }
 
         /* Main Content Container */
@@ -59,10 +68,10 @@
             margin: -60px auto 50px auto; /* Pulls the content up over the image */
             background: white;
             border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
             padding: 50px;
             position: relative;
-            z-relative: 10;
+            z-index: 10;
         }
 
         /* Section Styling */
@@ -95,7 +104,7 @@
             font-size: 1.05rem;
         }
 
-        /* New Services Section (Grid Layout) */
+        /* What I Offer Section (Grid Layout) */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -106,19 +115,20 @@
         .service-card {
             background: #f8fafc;
             border-left: 4px solid #38bdf8;
-            padding: 20px;
+            padding: 25px;
             border-radius: 8px;
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .service-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
         }
 
         .service-card h4 {
             color: #0f172a;
             margin-bottom: 10px;
+            font-size: 1.2rem;
         }
 
         /* Skills List */
@@ -132,10 +142,11 @@
         .skills-list li {
             background: #e0f2fe;
             color: #0284c7;
-            padding: 8px 20px;
+            padding: 10px 20px;
             border-radius: 30px;
             font-weight: 600;
             font-size: 0.95rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
 
         /* Contact & Form Grid */
@@ -150,6 +161,7 @@
             padding: 30px;
             border-radius: 12px;
             height: fit-content;
+            border: 1px solid #e2e8f0;
         }
 
         .contact-info p {
@@ -163,9 +175,11 @@
             color: #0284c7;
             text-decoration: none;
             font-weight: 600;
+            transition: color 0.2s ease;
         }
 
         .contact-info a:hover {
+            color: #0369a1;
             text-decoration: underline;
         }
 
@@ -185,7 +199,7 @@
             margin-bottom: 8px;
             font-weight: 600;
             color: #334155;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
         }
 
         input, textarea {
@@ -194,13 +208,14 @@
             border-radius: 8px;
             font-size: 1rem;
             background: #f8fafc;
-            transition: border 0.3s ease;
+            transition: all 0.3s ease;
         }
 
         input:focus, textarea:focus {
             outline: none;
             border-color: #38bdf8;
             background: white;
+            box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.2);
         }
 
         button {
@@ -212,11 +227,16 @@
             font-weight: 600;
             border-radius: 8px;
             cursor: pointer;
-            transition: background 0.3s ease;
+            transition: background 0.3s ease, transform 0.1s ease;
+            margin-top: 10px;
         }
 
         button:hover {
             background: #0284c7;
+        }
+        
+        button:active {
+            transform: scale(0.98);
         }
 
         /* Responsive Design */
@@ -225,7 +245,7 @@
                 grid-template-columns: 1fr;
             }
             .hero h1 {
-                font-size: 2.8rem;
+                font-size: 3rem;
             }
             .container {
                 margin: -30px 15px 30px 15px;
@@ -237,9 +257,9 @@
 <body>
 
     <div class="hero">
-        <h1>Priyanka</h1>
+        <h1>PRIYANKA</h1>
         <h2>Your Ultimate Student Help Desk</h2>
-        <p>Empowering your academic journey—real solutions and reliable support for student success.</p>
+        <p>"Empowering your academic journey—real solutions and reliable support for student success."</p>
     </div>
 
     <div class="container">
