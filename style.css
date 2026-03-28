@@ -1,67 +1,303 @@
+/* =========================================
+   PRIYANKA HELP DESK - PREMIUM AESTHETIC
+   ========================================= */
+
+/* General Reset & Custom Scrollbar */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* Custom Sleek Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #0f172a;
+}
+::-webkit-scrollbar-thumb {
+    background: #38bdf8;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #0284c7;
 }
 
 body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
+    /* Highly aesthetic dark workspace image */
+    background: url('https://images.unsplash.com/photo-1517336714731-489689fd1ca8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat fixed;
+    color: #f8fafc;
+    line-height: 1.6;
+    overflow-x: hidden;
 }
 
-header {
-  background: #111;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
+/* Dark Gradient Overlay for perfect readability */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: radial-gradient(circle at center, rgba(15, 23, 42, 0.4) 0%, rgba(15, 23, 42, 0.9) 100%);
+    z-index: -1;
 }
 
-nav a {
-  color: #fff;
-  margin: 0 10px;
-  text-decoration: none;
-}
-
+/* --- Hero Section --- */
 .hero {
-  background: #f4f4f4;
-  text-align: center;
-  padding: 40px;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    animation: fadeInDown 1.2s ease-out;
 }
 
+.hero h1 {
+    font-size: 4.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 4px;
+    margin-bottom: 5px;
+    text-shadow: 0 0 20px rgba(56, 189, 248, 0.6); /* Glowing text effect */
+}
+
+.hero h2 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 20px;
+    color: #38bdf8;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    color: #cbd5e1;
+    font-style: italic;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 10px 20px;
+    border-radius: 30px;
+    backdrop-filter: blur(5px);
+}
+
+/* --- Main Glassmorphism Container --- */
+.container {
+    max-width: 1000px;
+    margin: -100px auto 50px auto; 
+    padding: 50px;
+    position: relative;
+    z-index: 10;
+    
+    /* The Glass Effect */
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(16px) saturate(120%);
+    -webkit-backdrop-filter: blur(16px) saturate(120%);
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    border-left: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.5);
+}
+
+/* --- Typography & Sections --- */
 section {
-  padding: 40px;
+    margin-bottom: 50px;
+    animation: fadeInUp 1s ease-out;
 }
 
-.projects {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+h3 {
+    font-size: 2rem;
+    color: #ffffff;
+    margin-bottom: 25px;
+    position: relative;
+    padding-bottom: 10px;
 }
 
-.card {
-  border: 1px solid #ddd;
-  padding: 20px;
-  border-radius: 10px;
+/* Neon underline for headings */
+h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 60px;
+    height: 4px;
+    background: #38bdf8;
+    border-radius: 2px;
+    box-shadow: 0 0 10px #38bdf8;
 }
 
-#contact input,
-#contact textarea {
-  width: 100%;
-  padding: 10px;
-  margin: 10px 0;
+p {
+    color: #cbd5e1;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+/* --- Interactive Service Cards --- */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.service-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 30px;
+    border-radius: 15px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    backdrop-filter: blur(10px);
+}
+
+.service-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 15px 30px rgba(56, 189, 248, 0.2);
+    border-color: rgba(56, 189, 248, 0.5);
+}
+
+.service-card h4 {
+    color: #38bdf8;
+    margin-bottom: 12px;
+    font-size: 1.3rem;
+}
+
+/* --- Glowing Skills List --- */
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    list-style: none;
+}
+
+.skills-list li {
+    background: rgba(56, 189, 248, 0.1);
+    color: #38bdf8;
+    border: 1px solid rgba(56, 189, 248, 0.3);
+    padding: 10px 25px;
+    border-radius: 30px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.skills-list li:hover {
+    background: #38bdf8;
+    color: #0f172a;
+    box-shadow: 0 0 15px rgba(56, 189, 248, 0.6);
+    transform: translateY(-3px);
+}
+
+/* --- Contact & Form Section --- */
+.contact-section {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 40px;
+}
+
+.contact-info {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 35px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    height: fit-content;
+}
+
+.contact-info p {
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+.contact-info a {
+    color: #38bdf8;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: #bae6fd;
+    text-shadow: 0 0 8px rgba(186, 230, 253, 0.8);
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+label {
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #e2e8f0;
+    letter-spacing: 0.5px;
+}
+
+input, textarea {
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 15px 20px;
+    border-radius: 10px;
+    font-size: 1rem;
+    color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+input::placeholder, textarea::placeholder {
+    color: #64748b;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #38bdf8;
+    background: rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 15px rgba(56, 189, 248, 0.2);
 }
 
 button {
-  padding: 10px 20px;
-  background: #111;
-  color: #fff;
-  border: none;
-  cursor: pointer;
+    background: linear-gradient(135deg, #0ea5e9, #0284c7);
+    color: white;
+    border: none;
+    padding: 16px 30px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    box-shadow: 0 4px 15px rgba(2, 132, 199, 0.4);
 }
 
-footer {
-  text-align: center;
-  padding: 20px;
-  background: #111;
-  color: #fff;
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(2, 132, 199, 0.6);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* --- Animations --- */
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Design */
+@media (max-width: 850px) {
+    .contact-section { grid-template-columns: 1fr; }
+    .hero h1 { font-size: 3rem; }
+    .container { margin: -50px 15px 30px 15px; padding: 30px 20px; }
 }
