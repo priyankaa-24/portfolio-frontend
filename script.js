@@ -10,7 +10,7 @@ form.addEventListener("submit", async (e) => {
   };
 
   try {
-    const res = await fetch("http://localhost:5000/api/contact", {
+    const res = await fetch("https://portfolio-backend1-y6v4.onrender.com/api/contact", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -25,6 +25,6 @@ form.addEventListener("submit", async (e) => {
 
   } catch (err) {
     console.error(err);
-    alert("❌ Server not running");
+    alert("❌ Server error");
   }
 });
