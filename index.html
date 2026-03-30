@@ -1,90 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PRIYANKA | Student Help Desk</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PRIYANKA | Student Help Desk</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
 </head>
 <body>
 
-    <div class="hero">
-        <h1>PRIYANKA</h1>
-        <h2>Your Ultimate Student Help Desk</h2>
-        <p>"Empowering your academic journey—real solutions and reliable support for student success."</p>
-    </div>
+<div class="hero">
+    <h1>PRIYANKA</h1>
+    <h2>Your Ultimate Student Help Desk</h2>
+    <p>"Empowering your academic journey."</p>
+</div>
 
-    <div class="container">
-        
-        <section>
-            <h3>About Me</h3>
-            <p>Hi, I'm Priyanka! I am passionate about making student life easier and more manageable. Navigating the academic world can be challenging, which is why I created this help desk.</p>
-            <p>My goal is to offer clear, straightforward support, share helpful resources, and provide technical guidance. Whether you are stuck on a problem or just need some direction, I am here to help you focus on learning, growing, and achieving your goals.</p>
-        </section>
+<div class="container">
 
-        <section>
-            <h3>How I Can Help You</h3>
-            <div class="services-grid">
-                <div class="service-card">
-                    <h4>💻 Tech Debugging</h4>
-                    <p>Stuck on a code error? I can help you troubleshoot and understand your HTML, CSS, and JS assignments.</p>
-                </div>
-                <div class="service-card">
-                    <h4>📚 Study Guidance</h4>
-                    <p>Get clear explanations on core Computer Science fundamentals to prepare for your exams.</p>
-                </div>
-                <div class="service-card">
-                    <h4>🚀 Project Advice</h4>
-                    <p>Need ideas or structure for your next student project? Let's brainstorm and build something great.</p>
-                </div>
-            </div>
-        </section>
+<section>
+<h3>Contact Me</h3>
 
-        <section>
-            <h3>Technical Skills</h3>
-            <ul class="skills-list">
-                <li>HTML5</li>
-                <li>CSS3 (Modern Design)</li>
-                <li>JavaScript (ES6)</li>
-                <li>Computer Science Fundamentals</li>
-            </ul>
-        </section>
+<div class="contact-section">
 
-        <section>
-            <h3>Let's Connect</h3>
-            <div class="contact-section">
-                <div class="contact-info">
-                    <p>📧 <strong>Email:</strong> <br><a href="mailto:pri274581@gmail.com">pri274581@gmail.com</a></p>
-                    <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.1); margin: 15px 0;">
-                    <p>💬 <strong>WhatsApp:</strong> <br><a href="https://wa.me/919632716585" target="_blank">+91 9632716585</a></p>
-                    <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.1); margin: 15px 0;">
-                    <p>📞 <strong>Call Me:</strong> <br><a href="tel:+919632716585">+91 9632716585</a></p>
-                </div>
+<form id="contactForm">
 
-                <form action="#" method="POST">
-                    <div class="form-group">
-                        <label for="name">Full Name</label>
-                        <input type="text" id="name" name="name" placeholder="John Doe" required>
-                    </div>
+<div class="form-group">
+<label>Name</label>
+<input type="text" id="name" required>
+</div>
 
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" placeholder="student@university.edu" required>
-                    </div>
+<div class="form-group">
+<label>Email</label>
+<input type="email" id="email" required>
+</div>
 
-                    <div class="form-group">
-                        <label for="message">How can I help you?</label>
-                        <textarea id="message" name="message" rows="5" placeholder="I need help with my JavaScript assignment..." required></textarea>
-                    </div>
+<div class="form-group">
+<label>Message</label>
+<textarea id="message" required></textarea>
+</div>
 
-                    <button type="submit">Send Message</button>
-                </form>
-            </div>
-        </section>
+<button type="submit">Send Message</button>
 
-    </div>
+</form>
 
+</div>
+</section>
+
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>

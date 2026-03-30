@@ -3,26 +3,24 @@ const form = document.getElementById("contactForm");
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
 
-  const name = document.getElementById("name").value;
-  const email = document.getElementById("email").value;
-  const message = document.getElementById("message").value;
+  const data = {
+    name: document.getElementById("name").value,
+    email: document.getElementById("email").value,
+    message: document.getElementById("message").value
+  };
 
   try {
-    const res = await fetch("http://localhost:5000/contact", {
+    const res = await fetch("http://localhost:5000/api/contact", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
       },
-      body: JSON.stringify({
-        name,
-        email,
-        message
-      })
+      body: JSON.stringify(data)
     });
 
     const result = await res.json();
 
-    alert(result.message);
+    alert(result.message || "✅ Message Sent!");
     form.reset();
 
   } catch (err) {
